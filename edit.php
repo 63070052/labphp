@@ -14,7 +14,9 @@ $sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
 $sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
 
 if (mysqli_query($conn, $sql)) {
-    echo '<A HREF ="https://phpscript52.azurewebsites.net/show.php" A>'
+  <tr>
+    <td><center><a href="show.php"></a></center></td>
+  </tr>
     //echo "New record created successfully! CONGRATULATION!";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
