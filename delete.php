@@ -11,15 +11,14 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 
-// sql to delete a record
-$sql = "DELETE FROM guestbook (Name , Comment) VALUES ('$name', '$comment')";
+$sql = $sql = "DELETE FROM guestbook WHERE name='$name'";
+$sql = "DELETE FROM guestbook WHERE Comment='$comment'";
 
-if ($conn->query($sql) === TRUE) {
-  echo "Record deleted successfully";
-} else {
-  echo "Error deleting record: " . $conn->error;
-}
-
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully! CONGRATULATION!";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
   
 mysqli_close($conn);
 ?>
