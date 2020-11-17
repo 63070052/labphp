@@ -14,10 +14,8 @@ $sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
 $sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
 
 if (mysqli_query($conn, $sql)) {
-  <tr>
-    <td><center><a href="show.php"></a></center></td>
-  </tr>
-    //echo "New record created successfully! CONGRATULATION!";
+    //echo '<A HREF = "http://www.thaiseoboard.com "> Thaiseoboard </A>'
+    echo "New record created successfully! CONGRATULATION!";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
