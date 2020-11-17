@@ -10,13 +10,11 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 
-$sql = "UPDATE guestbook SET Comment='$comment' WHERE Comment='$comment' ";
-$sql = "UPDATE guestbook SET Name='$name' WHERE Name='$name' ";
+$sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
 
 if (mysqli_query($conn, $sql)) {
     header('Location: https://phpscript52.azurewebsites.net/show.php');
 
-    //echo "New record created successfully! CONGRATULATION!";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
