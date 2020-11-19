@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <h1>ITF Form</h1>
+  <center><h1>ITF Form</h1><center>
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itflab52.mysql.database.azure.com', 'it63070052@itflab52', 'YHVexv86', 'ITFlab', 3306);
@@ -19,11 +19,11 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<center><table width="600" border="1">
+<center><table width="700" border="1">
   <center><tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
-    <th width="150"> <div align="center">Action </div></th>
+    <th width="250"> <div align="center">Action </div></th>
   </tr><center>
 <?php
 while($Result = mysqli_fetch_array($res))
