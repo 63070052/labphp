@@ -13,7 +13,7 @@ $comment = $_POST['comment'];
 $sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully! CONGRATULATION!";
+    header('Location: https://phpscript52.azurewebsites.net/show.php');
 
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
