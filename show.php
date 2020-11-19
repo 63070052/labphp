@@ -12,7 +12,7 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" border="1">
+<center><table width="600" border="1">
   <tr><center>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
@@ -30,7 +30,7 @@ while($Result = mysqli_fetch_array($res))
 <?php
 }
 ?>
-</table>
+</table><center>
 <center><a href="form insert.html"><input type="submit" value="INSERT" class="btn btn-info"></a></center>
 <?php
 mysqli_close($conn);
